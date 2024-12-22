@@ -233,4 +233,22 @@ body {
       min-width: 90%;
     }
   }
+
+
+  /* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+  }
+  
+  /* Ensuring no elements overflow their containers */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Optional: Fix issue if padding/margin is added in the main container */
+  #main-container {
+    overflow: hidden;
+  }
   
