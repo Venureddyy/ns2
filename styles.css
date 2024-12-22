@@ -1,0 +1,236 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Responsive Menu */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #28a745;
+      padding: 1em;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }
+  
+  /* Sections */
+  section {
+    padding: 2em;
+  }
+  
+  #home {
+    background: #f4f4f4;
+    text-align: center;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+  }
+  
+  .product-card {
+    background: #e9e9e9;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #222;
+    color: #fff;
+  }
+
+  #showcase {
+    text-align: center;
+  }
+  
+  /* Showcase */
+  #slideshow-img {
+    width: 100%;              /* Make it responsive and take up full width */
+    max-width: 300px;         /* Set a maximum width for the image */
+    height: 300px;            /* Set a fixed height to make it a square */
+    object-fit: cover;        /* This ensures the image covers the box, without stretching */
+    margin: 20px auto;        /* Center it with auto margins */
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    #slideshow-img {
+      max-width: 200px;       /* For mobile, use a smaller image size */
+      height: 200px;          /* Smaller fixed height */
+    }
+  }
+  
+  /* products */
+#products {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  #products h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Product grid to display products in a row */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Styling for each product card */
+  .product-card {
+    border: 1px solid #ccc;  /* Light border around the card */
+    border-radius: 10px;      /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for better visualization */
+    overflow: hidden;
+    max-width: 300px;        /* Limit max width */
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Product image styles */
+  .product-image {
+    width: 100%;
+    height: 200px;             /* Fixed height to maintain a square aspect ratio */
+    object-fit: cover;         /* Ensure the image covers the box */
+    border-radius: 10px;       /* Optional, to match the card’s rounded corners */
+    margin-bottom: 10px;       /* Space between image and product name */
+  }
+  
+  /* Product name styles */
+  .product-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+  /* Swiper container */
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;  /* Optional: Padding for top/bottom of swiper */
+  }
+  
+  /* Each individual swiper-slide (product card) */
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Product card styling */
+  .product-card {
+    background-color: #fff;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 200px; /* Control the size of each card */
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Optional: Custom styling for swiper navigation */
+  .swiper-button-next, .swiper-button-prev {
+    color: #333;  /* Custom color for the next/prev arrows */
+  }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #333;
+  }
+  
+  /* Responsive product cards */
+  @media (max-width: 600px) {
+    .swiper-slide {
+      min-width: 80%;  /* Adjust the width of slides on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .swiper-slide {
+      min-width: 90%;
+    }
+  }
+  
